@@ -45,9 +45,6 @@ for a in itertools.repeat(None, 100):
                         break
     sr_vector.append(1 - ff/r)
 
-#print(ff/100)                          
-#print(f_vector[0:5])
-
 et = time.time()
 
 elt = et - st
