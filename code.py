@@ -1,8 +1,8 @@
 import random
 import time
+# Used to evaluate elapsed time
 from turtle import color
 from matplotlib.animation import FFMpegWriter
-# Used to evaluate elapsed time
 import matplotlib.pyplot as plt
 import statistics
 import itertools
