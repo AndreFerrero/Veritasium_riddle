@@ -2,6 +2,7 @@ from cProfile import label
 import random
 import time
 from turtle import color
+from matplotlib.animation import FFMpegWriter
 # Used to evaluate elapsed time
 import matplotlib.pyplot as plt
 #import seaborn as sns
@@ -17,8 +18,8 @@ import itertools
 # ff = final failure counter
 # r = range for trials
 st = time.time()
-
-f_vector = []
+# success rate vector
+sr_vector = []
 for a in itertools.repeat(None, 100):
     ff = 0
     r = 100
@@ -46,7 +47,7 @@ for a in itertools.repeat(None, 100):
 
                     if s[p] == b[i] or c >= 50:
                         break
-    f_vector.append(ff/r)
+    sr_vector.append(1 - ff/r)
 
 #print(ff/100)                          
 #print(f_vector[0:5])
@@ -57,12 +58,12 @@ elt = et - st
 print("Elapsed time is:", elt, "seconds")
 
 # Data analysis and visualisation
-avg = statistics.mean(f_vector)
-v = statistics.variance(f_vector)
-m = statistics.median(f_vector)
+avg = statistics.mean(sr_vector)
+v = statistics.variance(sr_vector)
+m = statistics.median(sr_vector)
 
 plt.style.use('ggplot')
-plt.hist(f_vector, bins = 20, edgecolor = "white", color= "c")
+plt.hist(sr_vector, bins = 20, edgecolor = "white", color= "c")
 plt.xlabel("Failure rates")
 plt.ylabel("Frequencies")
 
