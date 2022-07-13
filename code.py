@@ -28,9 +28,10 @@ for a in itertools.repeat(None, 100):
         # c = loop dimensions counter
         # f = failure counter for each trial
         f = 0
-        for i in range(100):
+        i = 0
+        while i < 100 and f == 0:
             c = 0
-            if b[i] != s[i] and f == 0:
+            if b[i] != s[i]:
                 c += 1
                 p = b.index(s[i])
                 while True: 
@@ -40,9 +41,11 @@ for a in itertools.repeat(None, 100):
                     if c >= 50:
                         f += 1
                         ff += 1
+                        i = 99
 
                     if s[p] == b[i] or c >= 50:
                         break
+            i += 1
     sr_vector.append(1 - ff/r)
 
 et = time.time()
