@@ -1,5 +1,6 @@
 # Veritasium_riddle
 I coded the solution proposed by Veritasium to the riddle of the 100 prisoners.
+Link to the video for better understanding: https://youtu.be/iSNsgj1OCLA
 
 The context is the following:
 Inside a room there are 100 boxes, and inside each box there's a slip of paper. Both a numbered from 1 to 100.
@@ -20,3 +21,4 @@ To visualise the result, I plotted the histogram of the success rate, showing al
 Obviously, as with each trial the boxes and the slips are shuffled in a different way, that creates a certain degree of variability with the length of
 each loop for each box. 
 Nevertheless the expected value and the median confirm our expectations about the success rate
+
