@@ -1,8 +1,8 @@
 import random
 import time
+# Used to evaluate elapsed time
 from turtle import color
 from matplotlib.animation import FFMpegWriter
-# Used to evaluate elapsed time
 import matplotlib.pyplot as plt
 import statistics
 import itertools
@@ -45,9 +45,6 @@ for a in itertools.repeat(None, 100):
                         break
     sr_vector.append(1 - ff/r)
 
-#print(ff/100)                          
-#print(f_vector[0:5])
-
 et = time.time()
 
 elt = et - st
@@ -60,7 +57,7 @@ m = statistics.median(sr_vector)
 
 plt.style.use('ggplot')
 plt.hist(sr_vector, bins = 20, edgecolor = "white", color= "c")
-plt.xlabel("Failure rates")
+plt.xlabel("Success rates")
 plt.ylabel("Frequencies")
 
 # adding mean and median
