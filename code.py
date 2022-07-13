@@ -60,7 +60,7 @@ m = statistics.median(sr_vector)
 
 plt.style.use('ggplot')
 plt.hist(sr_vector, bins = 20, edgecolor = "white", color= "c")
-plt.xlabel("Failure rates")
+plt.xlabel("Success rates")
 plt.ylabel("Frequencies")
 
 # adding mean and median
