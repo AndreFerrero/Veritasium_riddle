@@ -1,13 +1,9 @@
-from cProfile import label
 import random
 import time
 from turtle import color
 from matplotlib.animation import FFMpegWriter
 # Used to evaluate elapsed time
 import matplotlib.pyplot as plt
-#import seaborn as sns
-# it creates a better plot at the end
-#sns.set()
 import statistics
 import itertools
 # useful to substitute for loops with itertools.repeat
